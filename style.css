@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    
+}
+
+body{
+    margin: 0px;
+    align-items: center;
+}
+main{
+    align-items: center;
+}
+.steper{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    margin-left: 5%;
+  
+}
+ main .information{
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 15%;
+}
+main .questionnaire{
+    width: 15%;
+}
+main .resultats{
+    width: 15%;
+}
+
+#info-title{
+color: #1078AD;
+font-family: 'Cairo', sans-serif;
+font-size: 22px;
+font-weight: 900;
+margin-bottom: 30px;
+text-align: center;
+}
+.paragraphe{
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+#step{
+    border-radius: 2px;
+}
+
