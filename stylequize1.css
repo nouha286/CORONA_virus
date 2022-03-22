@@ -5,17 +5,16 @@ body{
 
 }
 label{
-    color: #707070 !important;
+    color: #1078AD!important;
+    
 }
 .bg-c{
     background: #1078AD !important;
 
 }
-input.radio{
-	accent-color: yellow!important;
-    width: 60px;
-    height: 28px; 
-    color: #707070 !important;
+input{
+	border: 3px solid #1078AD;
+    color: #1078AD ;
 }
 button:hover{
     background: #1078AD !important;
@@ -38,4 +37,8 @@ button:hover{
 .card-text{
     color: #707070;
     font-size: 41PX;
+}
+input::placeholder{
+    color: #1079ad93 ;
+    font-weight: bold;
 }
