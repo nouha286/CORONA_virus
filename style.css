@@ -1,33 +1,13 @@
 *{
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
-    
-}
-
-body{
-    margin: 0px;
-    align-items: center;
-}
-main{
-    align-items: center;
+    font-family: 'Cairo', sans-serif;  
 }
 .steper{
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items:flex-end;
-    margin-left: 5%;
-  
-}
- main .information{
-    box-sizing: border-box;
-    flex-direction: column;
-    width: 15%;
-}
-main .questionnaire{
-    width: 15%;
-}
-main .resultats{
-    width: 15%;
+    align-items: flex-end;
+    margin-right: 7%;
 }
 
 #info-title{
@@ -44,7 +24,17 @@ text-align: center;
     background-color: #e9ecef;
     border-radius: 0.3rem;
 }
-#step{
-    border-radius: 2px;
+
+
+@media (max-width: 500px){
+   main .steper {
+        width: 97% !important
+    }
+    .paragraphe{
+        width: 100%;
+    }
 }
+
+
+
 
