@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="432.874" height="63" viewBox="0 0 432.874 63">
+  <g id="Pagination" transform="translate(1 0.392)">
+    <text id="المعلومات" transform="translate(32 53.608)" fill="#222" font-size="13" font-family="Cairo-Bold, Cairo" font-weight="700"><tspan x="-32.26" y="0">Informations</tspan></text>
+    <text id="استبيان" transform="translate(231 54.608)" fill="#222" font-size="14" font-family="Cairo-Bold, Cairo" font-weight="700"><tspan x="-23.982" y="0">Questionnaire</tspan></text>
+    <text id="النتائج" transform="translate(411 53.608)" fill="#222" font-size="13" font-family="Cairo-Bold, Cairo" font-weight="700"><tspan x="-17.947" y="0">Résultats</tspan></text>
+    <rect id="Rectangle_732" data-name="Rectangle 732" width="363" height="3" transform="translate(52 16.608)" fill="#026534"/>
+    <circle id="Ellipse_271" data-name="Ellipse 271" cx="19.5" cy="19.5" r="19.5" transform="translate(211 -0.392)" fill="#88b7d3"/>
+    <ellipse id="Ellipse_270" data-name="Ellipse 270" cx="5.5" cy="5" rx="5.5" ry="5" transform="translate(35 11.608)" fill="#1078ad"/>
+    <circle id="Ellipse_275" data-name="Ellipse 275" cx="5" cy="5" r="5" transform="translate(225 14.608)" fill="#f4cf1b"/>
+    <path id="Tracé_198" data-name="Tracé 198" d="M5.16,0A5.16,5.16,0,1,1,0,5.16,5.16,5.16,0,0,1,5.16,0Z" transform="translate(421.554 12.385)" fill="#1078ad"/>
+  </g>
+</svg>
