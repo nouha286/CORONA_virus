@@ -37,7 +37,7 @@ button:hover{
 
 .card-text{
     color: #707070;
-    font-size: 41PX;
+    font-size: 30px;
 }
 input::placeholder{
     color: #1079ad93 ;
