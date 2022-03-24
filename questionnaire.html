@@ -69,8 +69,8 @@
                         <p class="card-text" id="question" ></p>
                         <div>
                             <form class="text-start container"  style=" font-size: 30px;">
-                                <input class="radio my-3" type="radio" name="gender" value="Oui" id="option1"   /><label>Oui</label></br>
-                                <input  class="radio my-3" type="radio" name="gender" value="non" id="option2" /><label>Non</label>
+                                <input class="radio my-3" type="radio" name="gender" value="Oui" /><label id="option1" ></label></br>
+                                <input  class="radio my-3" type="radio" name="gender" value="Non"  /><label id="option2" ></label>
                             </form>
                             <div class="text-center container prg1med p-3" id="para">
                                 <h2 class="p-3">médicaments anti-inflammatoires </h>
@@ -81,6 +81,9 @@
                                 <button class="btn btn-lg mt-5 me-5"  type="button" onclick="next();" style="background-color: #1078AD; color: white;"  >Suivant</button>
                             </div>
                            
+                            <div id="results">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,9 +91,9 @@
         </div>
    </div>
 
-   
+
   
-<script src="t.js">
+<script src="questionnaire.js">
 
 </script>
 </body>

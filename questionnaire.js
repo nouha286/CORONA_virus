@@ -57,14 +57,18 @@ function next(){
        let j=0;
        for (i=0; i< gender.length; i++)
        {
-           if(gender[i].value!=null)
+           if(gender[i].checked)
            {
                txt[j]=gender[i].value;
+               j++;
            }
+        
+
        }
        
         document.getElementById('results').innerText=txt[j];
     }
+
 
     
 
