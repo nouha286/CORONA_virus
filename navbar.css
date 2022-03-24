@@ -2,7 +2,7 @@ body{
     overflow-x: hidden;
 }
 .bgimage{
-    background-image: url( "Design/Assets/SVG/Merged bar-1.svg ");
+    background-image: url( "Design/Assets/SVG/background.svg ");
 }
 .index_p{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -10,3 +10,13 @@ body{
     font-size: 30px;
     color: #7F7F7F;
 }
+nav
+{
+    background-image:url(./Design/Assets/SVG/back.svg);
+    
+   
+}
+.lara{
+    background-image:url(./Design/Assets/SVG/En\ chiffres-1.svg ) ;
+    }   
+    
