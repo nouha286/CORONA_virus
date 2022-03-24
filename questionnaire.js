@@ -66,6 +66,7 @@ function next(){
         document.getElementById('results').innerText=txt[j];
     }
 
+    
 
     function previous(){
        
