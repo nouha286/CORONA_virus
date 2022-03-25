@@ -1,4 +1,3 @@
-
 class Question {
     constructor(ques, choices, answer,type,unite) {
         this.ques = ques;
@@ -14,8 +13,6 @@ class Question {
   
  
 }
-
-
 var questions =[
     new Question('Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ?',['oui','non'],'oui','radio',null),
     new Question('Quelle est votre température corporelle ?',null,null,'input','degrés'),
@@ -47,31 +44,15 @@ index=0
 document.getElementById('question').innerText =questions[index].ques;
 document.getElementById('option0').innerText =questions[index].choices[0];
 document.getElementById('option1').innerText =questions[index].choices[1];
-document.getElementById('option2').hidden =true;
-document.getElementById('option3').hidden =true;  
+document.getElementById('option2').hidden =true
+document.getElementById('option3').hidden =true  
 document.getElementById('rad2').hidden =true;
 document.getElementById('rad3').hidden =true;
 document.getElementById('in').style.display ='none';
-document.getElementById('unite').hidden =true;
-
+document.getElementById('unite').hidden =true
 
 prog= document.getElementById('progress').value;
 document.getElementById('precedent').hidden=true;
-
-let ras=document.querySelectorAll("input[name='gender']");
- 
-
-function find()
- {
-   let select= document.querySelector("input[name='gender']:checked").value;
-
-   document.getElementById('results').innerText=select;}
-
-ras.forEach(ras=>{
-    ras.addEventListener('change',find)
-                });
-
-             
 
 function next(){
     progress();
@@ -89,37 +70,29 @@ function next(){
             document.getElementById('para').style.display="none";
         }
         if(questions[index].type=='radio') radio()
-
-        else if(questions[index].type=='input') input() ; 
-  
-
-        let ras=document.querySelectorAll("input[name='gender']");
-             function find(){
-                let select= document.querySelector("input[name='gender']:checked").value;
-
- else if(questions[index].type=='input') input()  
-
- 
-       document.getElementById('results').innerText=txt[j];
- let ras=document.querySelectorAll("input[name='gender']");
-             function find(){
-                let select= document.querySelector("input[name='gender']:checked").value;
-            
-                document.getElementById('results').innerText=select;}
-
-             ras.forEach(ras=>{
-                 ras.addEventListener('change',find)
-             });
-
-
+        else if(questions[index].type=='input') input()  
+   
+        checkedradio()
+       
+       
     }
 
+    function checkedradio(){
+
+        let ras=document.querySelectorAll("input[name='gender']");
+        function find(){
+           let select= document.querySelector("input[name='gender']:checked").value;
+       
+           document.getElementById('results').innerText=select;}
+
+        ras.forEach(ras=>{
+            ras.addEventListener('change',find)
+        });
+    }
 
     
 
-    function previous()
-    {
-       
+    function previous(){
         diminute();
         if (index<0)  index=questions.length-1;
         if(index==0) 
@@ -142,8 +115,7 @@ function next(){
         document.getElementById('progress').style.width =prog+prog;
     }
 
-    function radio()
-    {
+    function radio(){
         
         document.getElementById('option0').hidden =false
         document.getElementById('option1').hidden =false
@@ -161,8 +133,8 @@ function next(){
             for (let i = 0; i <questions[index].choices.length; i++) {
               document.getElementById('option'+i).hidden =false
               document.getElementById('rad'+i).hidden =false;
-              document.getElementById('option'+i).innerText =questions[index].choices[i];
               document.getElementById('rad'+i).value=questions[index].choices[i];
+              document.getElementById('option'+i).innerText =questions[index].choices[i];
              
             }
             
@@ -170,25 +142,26 @@ function next(){
         
          
     }
-    function input()
-    {
+    function input(){
         document.getElementById('in').style.display ='block';
 
         document.getElementById('question').innerText =questions[index].ques;
         document.getElementById('unite').innerText =questions[index].unite;
 
-            document.getElementById('option0').hidden =true;
-            document.getElementById('option1').hidden =true;
-            document.getElementById('option2').hidden =true;
-            document.getElementById('option3').hidden =true;
+            document.getElementById('option0').hidden =true
+            document.getElementById('option1').hidden =true
+            document.getElementById('option2').hidden =true
+            document.getElementById('option3').hidden =true
                 document.getElementById('rad0').hidden =true;
                 document.getElementById('rad1').hidden =true;
                 document.getElementById('rad3').hidden =true;
                 document.getElementById('rad2').hidden =true;
                 document.getElementById('in').hidden =false;
-                document.getElementById('unite').hidden =false;
+                document.getElementById('unite').hidden =false
 
     }
+
+
     i=2;
     
     function progress()
@@ -206,12 +179,14 @@ function next(){
 
     function diminute()
     {
-      
+    
         
-       pro=prog;
-        document.getElementById('prog').style.width=""+pro/(i-(i-1))+"%";
+       pro=4*i; 
+       j=2;
+        document.getElementById('prog').style.width=""+pro/j+"%";
         
-       i++;
+       j++;
+       i--;
 
 
     }
@@ -219,4 +194,6 @@ function next(){
 
 
 
-    }
+
+
+
