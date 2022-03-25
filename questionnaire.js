@@ -179,18 +179,15 @@ function next(){
 
     function diminute()
     {
-    
+      
         
-       pro=4*i; 
-       j=2;
-        document.getElementById('prog').style.width=""+pro/j+"%";
+       pro=prog;
+        document.getElementById('prog').style.width=""+pro/i+"%";
         
-       j++;
-       i--;
+       i++;
 
 
     }
-
 
 
 
