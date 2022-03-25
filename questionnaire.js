@@ -71,6 +71,7 @@ function next(){
         }
         if(questions[index].type=='radio') radio()
         else if(questions[index].type=='input') input()  
+
     //    let gender =document.forms[0];
     //    txt=[];
     //    let i;
@@ -82,11 +83,46 @@ function next(){
     //            txt[j]=gender[i].value;
     //            j++;
     //        }
+
         
 
     //    }
        
     //     document.getElementById('results').innerText=txt[j];
+
+//        let gender =document.forms[0];
+//        txt=[];
+//        let i;
+//        let j=0;
+//        for (i=0; i< gender.length; i++)
+//        {
+//            if(gender[i].checked)
+//            {
+//                txt[j]=gender[i].value;
+//                j++;
+//            }
+
+        
+
+//     //    }
+       
+
+//     //     document.getElementById('results').innerText=txt[j];
+
+//         document.getElementById('results').innerText=txt[j];
+ let ras=document.querySelectorAll("input[name='gender']");
+             function find(){
+                let select= document.querySelector("input[name='gender']:checked").value;
+            
+                document.getElementById('results').innerText=select;}
+
+             ras.forEach(ras=>{
+                 ras.addEventListener('change',find)
+             });
+       
+       
+    }
+
     }
 
 
