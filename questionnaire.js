@@ -89,6 +89,7 @@ function next(){
             document.getElementById('para').style.display="none";
         }
         if(questions[index].type=='radio') radio()
+<<<<<<< HEAD
         else if(questions[index].type=='input') input() ; 
   
 
@@ -96,12 +97,64 @@ function next(){
              function find(){
                 let select= document.querySelector("input[name='gender']:checked").value;
 
+=======
+        else if(questions[index].type=='input') input()  
+
+    //    let gender =document.forms[0];
+    //    txt=[];
+    //    let i;
+    //    let j=0;
+    //    for (i=0; i< gender.length; i++)
+    //    {
+    //        if(gender[i].checked)
+    //        {
+    //            txt[j]=gender[i].value;
+    //            j++;
+    //        }
+
+        
+
+    //    }
+       
+    //     document.getElementById('results').innerText=txt[j];
+
+//        let gender =document.forms[0];
+//        txt=[];
+//        let i;
+//        let j=0;
+//        for (i=0; i< gender.length; i++)
+//        {
+//            if(gender[i].checked)
+//            {
+//                txt[j]=gender[i].value;
+//                j++;
+//            }
+
+        
+
+//     //    }
+       
+
+//     //     document.getElementById('results').innerText=txt[j];
+
+//         document.getElementById('results').innerText=txt[j];
+ let ras=document.querySelectorAll("input[name='gender']");
+             function find(){
+                let select= document.querySelector("input[name='gender']:checked").value;
+            
+>>>>>>> 0a06d7e6e7d6d37e572d639307e43345e4511f98
                 document.getElementById('results').innerText=select;}
 
              ras.forEach(ras=>{
                  ras.addEventListener('change',find)
              });
+<<<<<<< HEAD
       
+=======
+       
+       
+    
+>>>>>>> 0a06d7e6e7d6d37e572d639307e43345e4511f98
 
     }
 
@@ -210,3 +263,7 @@ function next(){
 
 
 
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 0a06d7e6e7d6d37e572d639307e43345e4511f98
