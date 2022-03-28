@@ -1,5 +1,5 @@
 
-if(fievre||(toux && maldegorge) || ( toux && courbatures) || (fièvre && diarrhée)){
+if(fievre==1||(toux==1 && maldegorge==1) || ( toux==1 && courbatures==1) || (fievre==1 && diarrhée==1)){
 
     if (facteurgrav>0) {
         this.Result("appelez le 141");
@@ -10,14 +10,23 @@ if(fievre||(toux && maldegorge) || ( toux && courbatures) || (fièvre && diarrh�
         
     }else if (((age>50 && age<69) && facteurdegrav==0) || facteurdegravmin > 0 ){
         this.result("téléconsultation ou médecin généraliste ou visite à domicile");
-    }else{
-
-        if (facteurdegravmin<=1) {
+    }else if (facteurdegravmin<=1)
+         {
             this.result("éléconsultation ou médecin généraliste ou visite à domicile");
             
         }else{
             this.result("appel 141");
-        }
-    }
+        }else if (facteurpronostique<=1){
 
-}
+            if (fievre==1 && toux==1) {
+                        if (facteurdegravmin<=2) {
+                            this.result("appel 141");
+                        }else{
+                            this.result("téléconsultation ou médecin généraliste ou visite à domicile");
+                        }
+
+        }}}
+        
+       
+        
+
