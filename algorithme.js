@@ -1,5 +1,4 @@
-
-if(fievre==1||(toux==1 && maldegorge==1) || ( toux==1 && courbatures==1) || (fievre==1 && diarrhée==1)){
+if (fievre==1||(toux==1 && malgorge==1) || ( toux==1 && courbatures==1) || (fievre==1 && diarrhée==1)){
 
     if (facteurgrav>0) {
         this.Result("appelez le 141");
@@ -25,8 +24,9 @@ if(fievre==1||(toux==1 && maldegorge==1) || ( toux==1 && courbatures==1) || (fie
                             this.result("téléconsultation ou médecin généraliste ou visite à domicile");
                         }
 
-        }}}
-        
-       
-        
+        }
 
+    }
+
+    
+    }              
