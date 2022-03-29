@@ -26,7 +26,18 @@ if (fievre==1||(toux==1 && malgorge==1) || ( toux==1 && courbatures==1) || (fiev
 
         }
 
+    }else if(fievre==1 || toux==1 || malgorge==1 || courbatures==1){
+        if (facteurgarv>0 ||facteurpronos>0) {
+            this.result=("Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141.");     
+            
+        }else{
+            this.result=("Votre situation ne relève probablement pas du Covid-19. Consultez votre médecin au moindre doute.")
+
+        }
+
+    }else{
+        this.result=("Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation. Pour toute information concernant le Covid-19 allez vers la page d’accueil.");
     }
 
-    
+
     }              
