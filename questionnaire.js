@@ -1,62 +1,55 @@
+
 class Question {
-    constructor(ques, choices, answer,type,unite) {
+    constructor(ques, choices, answer,type,unite ,min,max) {
         this.ques = ques;
         this.choices = choices;
         this.answer = answer;
         this.type = type;
         this.unite=unite;
+        this.max = max;
+        this.min=min;
 
     }
-    isCorrectAnswer(choice) {
-        if(this.answer == choice) ;
+      isCorrectAnswer= function(choice) {
+        if(this.answer == choice) {
+            return true;
+        } else
+          return false;
     }
   
  
 }
 var questions =[
-    new Question('Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ?',['oui','non'],'oui','radio',null),
-    new Question('Quelle est votre température corporelle ?',null,null,'input','degrés'),
-    new Question('Ces derniers jours, avez-vous une toux ou une augmentation de votre toux habituelle ? ',['oui','non'],'oui','radio',null),
-    new Question('Avez-vous eu des courbatures inhabituelles au cours des derniers jours ?',['oui','non'],'oui','radio',null),
-    new Question('Ces derniers jours, avez-vous un mal de gorge ?',['oui','non'],'oui','radio',null),
-    new Question('Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3 selles molles ?',['oui','non'],'oui','radio',null),
-    new Question('Ces derniers jours, avez-vous une fatigue inhabituelle qui vous a obligé à vous reposer plus de la moitié de la journée ?',['oui','non'],'oui','radio',null),
-    new Question('Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ?',['oui','non'],'oui','radio',null),
-    new Question('Dans les dernières 24 heures, avez-vous noté un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ?',['oui','non'],'oui','radio',null),
-    new Question('Actuellement, comment vous vous sentez ? ',['bien','assez bien','fatigue','trés fatigue'],'oui','radio',null),
-    new Question('Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.',null,null,'input','ans'),
-    new Question('Avez-vous de l’hypertension artérielle mal équilibrée ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ? ',['oui','non'],'oui','radio',null),
-    new Question('Êtes-vous diabétique ? ',['oui','non'],'oui','radio'),
-    new Question('Avez-vous ou avez-vous eu un cancer ? ',['oui','non'],'oui','radio',null),
-    new Question('Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ? ',['oui','non'],'oui','radio',null),
-    new Question('Avez-vous une insuffisance rénale chronique dialysée ? ',['oui','non'],'oui','radio',null),
-    new Question('Avez-vous une maladie chronique du foie ?',['oui','non'],'oui','radio',null),
-    new Question(' Êtes-vous enceinte ? ',['oui','non','man'],'oui','radio',null),
-    new Question('Quel est votre poids ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.',null,null,'input','Kg'),
-    new Question('Quelle est votre taille ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.',null,null,'input','cm'),
-    new Question(' Avez-vous une maladie connue pour diminuer vos défenses immunitaires ? ',['oui','non'],'oui','radio',null),
-    new Question('Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. Voici quelques exemples : corticoïdes, méthotrexate, ciclosporine, tacrolimus, azathioprine, cyclophosphamide (liste non exhaustive).',['oui','non'],'oui','radio',null)
+    new Question('Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ?',['oui','non'],null,'radio'),
+    new Question('Quelle est votre température corporelle ?',null,null,'input','degrés',34,40),
+    new Question('Ces derniers jours, avez-vous une toux ou une augmentation de votre toux habituelle ? ',['oui','non'],null,'radio'),
+    new Question('Avez-vous eu des courbatures inhabituelles au cours des derniers jours ?',['oui','non'],null,'radio'),
+    new Question('Ces derniers jours, avez-vous un mal de gorge ?',['oui','non'],null,'radio'),
+    new Question('Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3 selles molles ?',['oui','non'],null,'radio'),
+    new Question('Ces derniers jours, avez-vous une fatigue inhabituelle qui vous a obligé à vous reposer plus de la moitié de la journée ?',['oui','non'],null,'radio'),
+    new Question('Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ?',['oui','non'],null,'radio'),
+    new Question('Dans les dernières 24 heures, avez-vous noté un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ?',['oui','non'],null,'radio'),
+    new Question('Actuellement, comment vous vous sentez ? ',['bien','assez bien','fatigue','trés fatigue'],null,'radio'),
+    new Question('Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.',null,null,'input','ans',15,100),
+    new Question('Avez-vous de l’hypertension artérielle mal équilibrée ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ? ',['oui','non'],null,'radio'),
+    new Question('Êtes-vous diabétique ? ',['oui','non'],null,'radio'),
+    new Question('Avez-vous ou avez-vous eu un cancer ? ',['oui','non'],null,'radio',null),
+    new Question('Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ? ',['oui','non'],null,'radio'),
+    new Question('Avez-vous une insuffisance rénale chronique dialysée ? ',['oui','non'],null,'radio'),
+    new Question('Avez-vous une maladie chronique du foie ?',['oui','non'],null,'radio'),
+    new Question('Quel est votre poids ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.',null,null,'input','Kg',30,120),
+    new Question('Quelle est votre taille ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.',null,null,'input','cm',100,190),
+    new Question(' Avez-vous une maladie connue pour diminuer vos défenses immunitaires ? ',['oui','non'],null,'radio'),
+    new Question('Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. Voici quelques exemples : corticoïdes, méthotrexate, ciclosporine, tacrolimus, azathioprine, cyclophosphamide (liste non exhaustive).',['oui','non'],null,'radio')
 ]
 document.getElementById('para').style.display="block";
-
-
-index=0
-document.getElementById('question').innerText =questions[index].ques;
-document.getElementById('option0').innerText =questions[index].choices[0];
-document.getElementById('option1').innerText =questions[index].choices[1];
-document.getElementById('option2').hidden =true
-document.getElementById('option3').hidden =true  
-document.getElementById('rad2').hidden =true;
-document.getElementById('rad3').hidden =true;
-document.getElementById('in').style.display ='none';
-document.getElementById('unite').hidden =true
-
-prog= document.getElementById('progress').value;
 document.getElementById('precedent').hidden=true;
 
+index=0
+radio()
 function next(){
-    progress();
     
+    document.getElementById("form").innerText= "";
     if (index>=questions.length)  index=0;
     if(index==0)
     {
@@ -71,10 +64,9 @@ function next(){
         }
         if(questions[index].type=='radio') radio()
         else if(questions[index].type=='input') input()  
-   
-        checkedradio()
-       
-       
+     
+
+  
     }
 
     function checkedradio(){
@@ -83,17 +75,50 @@ function next(){
         function find(){
            let select= document.querySelector("input[name='gender']:checked").value;
        
-           document.getElementById('results').innerText=select;}
+           document.getElementById('results').innerText=select;
+           console.log(questions[index].isCorrectAnswer(select))}
 
         ras.forEach(ras=>{
             ras.addEventListener('change',find)
         });
     }
+    // function checkedradio(){
 
+    //     let ras=document.querySelectorAll("input[name='gender']");
+    //     function find(){
+    //          if(questions[index].type=='radio')
+    //          {
+    //             let select= document.querySelector("input[name='gender']:checked").value;
+    //             document.getElementById('results').innerText=select;
+    //             questions[index].answer=select;
+              
+    //             results+=questions[index].ques+': ' +questions[index].answer+'<br>';
+
+    //             console.log(results)
+               
+    //          }
+    //         //  else if(questions[index].type=='input')
+    //         //  {
+    //         //     document.getElementById('btnNext').addEventListener('click', () =>{
+    //         //         questions[index].answer= document.getElementById('in').value;
+    //         //         console.log(questions[index].answer)
+    //         //     });
+    //         //  }
+            
+    //     }
+
+    //     ras.forEach(ras=>{
+    //         ras.addEventListener('change',find)
+    //     });
+
+         
+
+    // }
     
 
     function previous(){
-        diminute();
+        document.getElementById("form").innerText= "";
+
         if (index<0)  index=questions.length-1;
         if(index==0) 
         {
@@ -112,85 +137,75 @@ function next(){
         if(questions[index].type=='radio') radio()
         else if(questions[index].type=='input') input()    
         index--;
-        document.getElementById('progress').style.width =prog+prog;
     }
 
     function radio(){
-        
-        document.getElementById('option0').hidden =false
-        document.getElementById('option1').hidden =false
-        document.getElementById('in').hidden =true;
-        document.getElementById('rad0').hidden =false;
-        document.getElementById('rad1').hidden =false;
-        document.getElementById('unite').hidden =true
-
-        
           document.getElementById('question').innerText =questions[index].ques;
-          document.getElementById('option0').innerText =questions[index].choices[0];
-          document.getElementById('option1').innerText =questions[index].choices[1];
-         
-          if(questions[index].choices.length>1){
-            for (let i = 0; i <questions[index].choices.length; i++) {
-              document.getElementById('option'+i).hidden =false
-              document.getElementById('rad'+i).hidden =false;
-              document.getElementById('rad'+i).value=questions[index].choices[i];
-              document.getElementById('option'+i).innerText =questions[index].choices[i];
-             
-            }
-            
-        }
-        
-         
+            let formulaire=document.getElementById('form');
+        for (let i = 0; i < questions[index].choices.length; i++) {
+            formulaire.innerHTML+=`
+            <div>
+                 <input class="radio my-2" type="radio" name="gender"  id="rad${i}" value="${questions[index].choices[i]}">
+                <label id="option${i}" for="rad${i}">${questions[index].choices[i]}</label>
+            </div>` ;
+            // document.getElementById('btnNext').disabled = true;
+
+            // document.querySelector("input[name='gender']").addEventListener("change",function(){
+            //    // if ( document.querySelector("input[name='gender']").checked == false) {
+                   
+            //   // }else{
+            //     document.getElementById('btnNext').disabled = false;
+            //    //}
+            // })
+            // questions[index].answer=document.querySelector('input[name="answer"]:checked').value;
+            // results+=questions[index].ques+': ' +questions[index].answer+'<br>';
+
+            // console.log(results)
+            checkedradio()  
     }
+    
+   
+}
     function input(){
-        document.getElementById('in').style.display ='block';
-
+      let  formulaire=document.getElementById('form');
         document.getElementById('question').innerText =questions[index].ques;
-        document.getElementById('unite').innerText =questions[index].unite;
+        formulaire.innerHTML =`<div class=" container text-center "  style="display: flex; font-size: 30px; margin-left: 142px;  ">
+            <input type="number" min="${questions[index].min}" max="${questions[index].max}" class="text-end" id="in" style="width: 51%;" placeholder="${questions[index].min+"-"+questions[index].max}" >
+            <span id="unite" class="input-group-text">${questions[index].unite}</span> </div>`;
+          let butdisp= document.getElementById('btnNext')
+          let inpu=questions[index].answer=document.getElementById('in')
+            // if(document.getElementById('in').value==""){
+            //     document.getElementById('btnNext').disabled = true;
+            // }
+            // else  {
+            //     document.getElementById('btnNext').disabled = false;
+            // }
+            // questions[index].answer=document.getElementById('in').value;
+            // console.log( questions[index].answer);
+            // return true;
+            butdisp.addEventListener('click', () =>{
+                questions[index].answer= inpu.value;
+                results+=questions[index].ques+': ' +questions[index].answer+'<br>';
 
-            document.getElementById('option0').hidden =true
-            document.getElementById('option1').hidden =true
-            document.getElementById('option2').hidden =true
-            document.getElementById('option3').hidden =true
-                document.getElementById('rad0').hidden =true;
-                document.getElementById('rad1').hidden =true;
-                document.getElementById('rad3').hidden =true;
-                document.getElementById('rad2').hidden =true;
-                document.getElementById('in').hidden =false;
-                document.getElementById('unite').hidden =false
+                console.log(results)
+            });
+            // inpu.addEventListener('keyup', () =>{
+                
+            //     if(inpu.value == "")butdisp.disabled = true
 
-    }
-
-
-    i=2;
-    
-    function progress()
-    {
-    
-     
-        prog="4";
-        document.getElementById('prog').style.width=""+prog*i+"%";
-        
-    
-        i++;
-
-      
-    }
-
-    function diminute()
-    {
-      
-        
-       pro=prog;
-        document.getElementById('prog').style.width=""+pro/i+"%";
-        
-       i++;
-
+            //      else butdisp.disabled = false;
+            // });
+              
+           
 
     }
 
 
-
-
-
-
+    // const results=()=>{
+    //     // let's display the
+    //     let results='';
+    //     for (let i = 0; i <questions.length; i++) {
+    //         results+=questions[i].title+': ' +questions[i].answer+'<br>';
+    //     }
+    //    document.getElementById("form").innerHTML=results;
+    // }
