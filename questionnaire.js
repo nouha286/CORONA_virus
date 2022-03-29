@@ -76,44 +76,15 @@ function next(){
            let select= document.querySelector("input[name='gender']:checked").value;
        
            document.getElementById('results').innerText=select;
-           console.log(questions[index].isCorrectAnswer(select))}
+           questions[index].answer=select
+           results+=questions[index].ques+': ' +questions[index].answer+'<br>'
+           console.log( results)}
 
         ras.forEach(ras=>{
             ras.addEventListener('change',find)
         });
     }
-    // function checkedradio(){
-
-    //     let ras=document.querySelectorAll("input[name='gender']");
-    //     function find(){
-    //          if(questions[index].type=='radio')
-    //          {
-    //             let select= document.querySelector("input[name='gender']:checked").value;
-    //             document.getElementById('results').innerText=select;
-    //             questions[index].answer=select;
-              
-    //             results+=questions[index].ques+': ' +questions[index].answer+'<br>';
-
-    //             console.log(results)
-               
-    //          }
-    //         //  else if(questions[index].type=='input')
-    //         //  {
-    //         //     document.getElementById('btnNext').addEventListener('click', () =>{
-    //         //         questions[index].answer= document.getElementById('in').value;
-    //         //         console.log(questions[index].answer)
-    //         //     });
-    //         //  }
-            
-    //     }
-
-    //     ras.forEach(ras=>{
-    //         ras.addEventListener('change',find)
-    //     });
-
-         
-
-    // }
+   
     
 
     function previous(){
@@ -146,21 +117,8 @@ function next(){
             formulaire.innerHTML+=`
             <div>
                  <input class="radio my-2" type="radio" name="gender"  id="rad${i}" value="${questions[index].choices[i]}">
-                <label id="option${i}" for="rad${i}">${questions[index].choices[i]}</label>
-            </div>` ;
-            // document.getElementById('btnNext').disabled = true;
-
-            // document.querySelector("input[name='gender']").addEventListener("change",function(){
-            //    // if ( document.querySelector("input[name='gender']").checked == false) {
-                   
-            //   // }else{
-            //     document.getElementById('btnNext').disabled = false;
-            //    //}
-            // })
-            // questions[index].answer=document.querySelector('input[name="answer"]:checked').value;
-            // results+=questions[index].ques+': ' +questions[index].answer+'<br>';
-
-            // console.log(results)
+                <label id="option${i}" for="rad${i}">${questions[index].choices[i]}</label></div>` ;
+          
             checkedradio()  
     }
     
@@ -174,38 +132,15 @@ function next(){
             <span id="unite" class="input-group-text">${questions[index].unite}</span> </div>`;
           let butdisp= document.getElementById('btnNext')
           let inpu=questions[index].answer=document.getElementById('in')
-            // if(document.getElementById('in').value==""){
-            //     document.getElementById('btnNext').disabled = true;
-            // }
-            // else  {
-            //     document.getElementById('btnNext').disabled = false;
-            // }
-            // questions[index].answer=document.getElementById('in').value;
-            // console.log( questions[index].answer);
-            // return true;
+          
             butdisp.addEventListener('click', () =>{
                 questions[index].answer= inpu.value;
                 results+=questions[index].ques+': ' +questions[index].answer+'<br>';
 
                 console.log(results)
             });
-            // inpu.addEventListener('keyup', () =>{
-                
-            //     if(inpu.value == "")butdisp.disabled = true
-
-            //      else butdisp.disabled = false;
-            // });
+          
               
            
 
     }
-
-
-    // const results=()=>{
-    //     // let's display the
-    //     let results='';
-    //     for (let i = 0; i <questions.length; i++) {
-    //         results+=questions[i].title+': ' +questions[i].answer+'<br>';
-    //     }
-    //    document.getElementById("form").innerHTML=results;
-    // }
