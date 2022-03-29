@@ -25,6 +25,11 @@ text-align: center;
     border-radius: 0.3rem;
 }
 
+nav
+{
+    background-image:url(./Design/Assets/SVG/back.svg);
+   
+}
 
 @media (max-width: 500px){
    main .steper {
