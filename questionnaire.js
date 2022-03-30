@@ -43,10 +43,9 @@ document.getElementById('para').style.display="block";
 index=0
 radio()
 function next(){
-<<<<<<< HEAD
+
     progress();
-=======
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
+
     index++;
     document.getElementById("form").innerText= "";
 
@@ -56,11 +55,10 @@ function next(){
         document.getElementById("question").innerText= "";
 
 
-<<<<<<< HEAD
+
         document.getElementById("results").innerHTML='<button  class="btn btn-lg mt-3  me-5" style="background-color: #1078AD; color: white;" onclick=" algorithm();">Terminer le test</button>';
-=======
+
         document.getElementById("results").innerHTML='<button  class="btn btn-lg mt-3  me-5" style="background-color: #1078AD; color: white;" onclick=" algorithm();">results</button>';
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
 
        
 
@@ -104,10 +102,9 @@ function next(){
     
 
     function previous(){
-<<<<<<< HEAD
+
         diminute();
-=======
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
+
         document.getElementById("form").innerText= "";
 
         if (index<0)  index=questions.length-1;
@@ -128,10 +125,9 @@ function next(){
         if(questions[index].type=='radio') radio()
         else if(questions[index].type=='input') input()    
         index--;
-<<<<<<< HEAD
+
        
-=======
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
+
     }
 
     function radio(){
@@ -181,7 +177,6 @@ function algorithm(){
     let diffaliments=false;
     let degress=0;
 
-<<<<<<< HEAD
      j=2;
       
     function progress()
@@ -194,7 +189,6 @@ function algorithm(){
          document.getElementById('j').innerText=j+"/22";
         j++;
 
-=======
 
     for (let i = 0; i <questions.length; i++) {
        if(questions[i].gravite=='facteurpronostique'){
@@ -242,7 +236,6 @@ function algorithm(){
         age=questions[i].answer
        }
      
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
 
       if(degress>=39){
           facteurdegravMin++
@@ -281,7 +274,6 @@ function algorithm(){
     }
     if (fievres==true || touxs==true || malgorges==true ||  courbature==true)
     {
-<<<<<<< HEAD
       
       
        
@@ -293,11 +285,10 @@ function algorithm(){
 
     }
 
-=======
+
         if (facteurdegravMaj==0 && facteurdegravMin==0) result="Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141."; 
         if ((facteurdegravMaj>0 || facteurdegravMin>0) || facteurpronostiques>0) result="Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141."; 
             
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
 
     
 function algorithm(){
@@ -399,7 +390,6 @@ function algorithm(){
                 if( facteurdegravMin>1) result='<p style="color:red;font-size: xx-large;">Appelez 141</p>';
             }
     }
-<<<<<<< HEAD
     if (fievres==true || touxs==true || malgorges==true ||  courbature==true)
     {
         if (facteurdegravMaj==0 && facteurdegravMin==0) result="Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141."; 
@@ -418,7 +408,7 @@ document.getElementById('pos').innerHTML=` <div class="progress" style="height: 
 <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem; background-color:#2B8EC1;"></button>
 <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem; background-color:#2B8EC1;"></button>
 <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem; background-color:bisque;"></button>`
-=======
+
    else result="Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation. Pour toute information concernant le Covid-19 allez vers la page d’accueil.";
 
    
@@ -441,7 +431,6 @@ margin-right: auto;display: block;border-radius: 0.3rem;"><a style="text-decorat
 </div>
 
 `;
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
 
 document.getElementById('results').innerHTML=`<div>
 <section class="text-center d-flex justify-content-center align-items-center w-100 p-5">
@@ -459,10 +448,6 @@ température deux fois par jour. Rappel des mesures d’hygiène.</p>
 margin-right: auto;display: block;border-radius: 0.3rem;"><a style="text-decoration: none; color:  #1078AD;" href="Preambule.html"> Recommencer le test</a></button>
 </div>
 
-<<<<<<< HEAD
 `;
 
-
-=======
->>>>>>> b51489db86e025082d7d7f7b3e4bccb967f034f8
 }
