@@ -250,7 +250,7 @@ function algorithm(){
       }else if(degress<=35.4){
         facteurdegravMaj++
       }
-      if(facteurpronostiques>0 && (age<15 || age>70)) result=`Prenez contact avec votre médecin généraliste au moindre 
+      if(facteurpronostiques>0 && (age<15 && age>70)) result=`Prenez contact avec votre médecin généraliste au moindre 
           doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins 
           de 15 ans. En cas d’urgence, appeler le 15. `;
       
@@ -259,14 +259,14 @@ function algorithm(){
         if (facteurpronostiques==0) {
             if((facteurdegravMin==0 && facteurdegravMaj==0) && age<50) result='nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes.";'
             
-            if((facteurdegravMin==0 && facteurdegravMaj==0 )&& (age< 69 && age> 50)|| facteurdegravMin>=1)  result="téléconsultation ou médecin généraliste ou visite à domicile";
+            if((facteurdegravMin==0 && facteurdegravMaj==0 )&& (age< 50 && age> 69)|| facteurdegravMin>=1)  result="téléconsultation ou médecin généraliste ou visite à domicile";
            
         }
         if (facteurpronostiques>=0) {
             if((facteurdegravMin==0 && facteurdegravMaj==0 )|| facteurdegravMin == 1) result="téléconsultation ou médecin généraliste ou visite à domicile";
-            if(facteurdegravMin>=2) result ='<p style="color:red; font-size: xx-large;">Appelez 141</p>';
+            if(facteurdegravMin>=2) result ='<p style="color:red; font-size: xx-large;">Appelez</p>';
         }
-        if(facteurpronostiques>=0 && facteurdegravMaj>=1) result ='<p style="color:red;font-size: xx-large;">Appelez 141</p>';
+        if(facteurpronostiques>=0 && facteurdegravMaj>=1) result ='<p style="color:red;font-size: xx-large;">Appelez</p>';
 
       }
       if (touxs==true && fievres==true )
