@@ -250,7 +250,7 @@ function algorithm(){
       }else if(degress<=35.4){
         facteurdegravMaj++
       }
-      if(facteurpronostiques>0 && (age<15 && age>70)) result=`Prenez contact avec votre médecin généraliste au moindre 
+      if(facteurpronostiques>0 && (age<15 || age>70)) result=`Prenez contact avec votre médecin généraliste au moindre 
           doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins 
           de 15 ans. En cas d’urgence, appeler le 15. `;
       
