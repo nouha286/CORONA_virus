@@ -259,7 +259,7 @@ function algorithm(){
         if (facteurpronostiques==0) {
             if((facteurdegravMin==0 && facteurdegravMaj==0) && age<50) result='nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes.";'
             
-            if((facteurdegravMin==0 && facteurdegravMaj==0 )&& (age< 50 && age> 69)|| facteurdegravMin>=1)  result="téléconsultation ou médecin généraliste ou visite à domicile";
+            if((facteurdegravMin==0 && facteurdegravMaj==0 )&& (age< 69 && age> 50)|| facteurdegravMin>=1)  result="téléconsultation ou médecin généraliste ou visite à domicile";
            
         }
         if (facteurpronostiques>=0) {
