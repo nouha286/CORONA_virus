@@ -264,9 +264,9 @@ function algorithm(){
         }
         if (facteurpronostiques>=0) {
             if((facteurdegravMin==0 && facteurdegravMaj==0 )|| facteurdegravMin == 1) result="téléconsultation ou médecin généraliste ou visite à domicile";
-            if(facteurdegravMin>=2) result ='<p style="color:red; font-size: xx-large;">Appelez</p>';
+            if(facteurdegravMin>=2) result ='<p style="color:red; font-size: xx-large;">Appelez 141</p>';
         }
-        if(facteurpronostiques>=0 && facteurdegravMaj>=1) result ='<p style="color:red;font-size: xx-large;">Appelez</p>';
+        if(facteurpronostiques>=0 && facteurdegravMaj>=1) result ='<p style="color:red;font-size: xx-large;">Appelez 141</p>';
 
       }
       if (touxs==true && fievres==true )
