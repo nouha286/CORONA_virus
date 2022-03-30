@@ -36,6 +36,7 @@ var questions =[
     new Question('Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. Voici quelques exemples : corticoïdes, méthotrexate, ciclosporine, tacrolimus, azathioprine, cyclophosphamide (liste non exhaustive).',['oui','non'],null,'radio','facteurpronostique')
  ]
 document.getElementById('para').style.display="block";
+document.getElementById('precedent').hidden=true;
 
 
 index=0
