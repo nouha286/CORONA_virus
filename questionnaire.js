@@ -23,7 +23,7 @@ var questions =[
     new Question('Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ?',['oui','non'],null,'radio','diffaliment'),
     new Question('Dans les dernières 24 heures, avez-vous noté un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ?',['oui','non'],null,'radio','generespiratoire'),
     new Question('Actuellement, comment vous vous sentez ? ',['bien','assez bien','fatigue','trés fatigue'],null,'radio','sensationmalaise'),
-    new Question('Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.',null,null,'input',null,'ans',15,100),
+    new Question('Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.',null,null,'input',null,'ans',12,100),
     new Question('Avez-vous de l’hypertension artérielle mal équilibrée ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ? ',['oui','non'],null,'radio','facteurpronostique'),
     new Question('Êtes-vous diabétique ? ',['oui','non'],null,'radio','facteurpronostique'),
     new Question('Avez-vous ou avez-vous eu un cancer ? ',['oui','non'],null,'radio',null,'facteurpronostique'),
